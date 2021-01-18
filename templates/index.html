@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Medical Cost Prediction</title>
+       
+    </head>
+
+<style>
+    body{
+        font: arial;
+        background: linear-gradient(to left, #8942a8, #ba382f);
+        width: 100%;
+        height: 100vh;
+    }
+ 
+</style>    
+
+<body >
+        <center>
+        <div>
+            
+            <h1>Medical Cost Predictio</h1><br>
+            
+            {{ prediction_text }} <br>
+            
+            <form action ="{{url_for('predict')}}", method = "post">
+            
+                <h3>Age</h3>
+                <input type="text" name="age" placeholder="" required="required"/>
+                <h3>Sex</h3>
+                <select type="text" name="sex" id="sex" required="required">
+                    <option value="1">Male</option>
+                    <option value="0">Female</option></select>
+                
+                <h3>Body Mass Index</h3>    
+                <input type="text" name="bmi" placeholder="" required="required"/>
+                
+                <h3> Number of Children</h3>
+                <input type="text" name="children" placeholder="" required="required"/>
+
+                <h3>Smoker</h3>
+                <select type="text" name="smoker" id="smoker" required="required">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option></select>
+                    
+                 <h3>Region</h3>
+                <select type="text" name="region" id="region" required="required">
+                    <option value="1">Southwest</option>
+                    <option value="2">Southeast</option>
+                    <option value = "3">northwest</option>
+                    <option value = "4"> northeast</option></select>
+                           
+                   
+                <br><button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+            
+        <br><br>
+        
+         <br><br><br><hr>
+         
+        </center>
+
+
+        </div>
+</body>
+</html>
+
+<style>
+
